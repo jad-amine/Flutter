@@ -21,17 +21,17 @@ class UserCard extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const <Widget> [
-            Text(
+          children: <Widget> [
+            const Text(
               'NAME',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2
               ),
             ),
-            SizedBox(height: 10),
-            Text(
-              'Chun-Li',
+            const SizedBox(height: 10),
+            const Text(
+              'John',
               style: TextStyle(
                 color: Colors.amberAccent,
                 fontSize: 28,
@@ -39,16 +39,16 @@ class UserCard extends StatelessWidget {
                 letterSpacing: 2
               ),
             ),
-            SizedBox(height: 30),
-            Text(
+            const SizedBox(height: 30),
+            const Text(
               'Current User Level',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2
               ),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               '8',
               style: TextStyle(
                 color: Colors.amberAccent,
@@ -57,8 +57,23 @@ class UserCard extends StatelessWidget {
                 letterSpacing: 2
               ),
             ),
-            SizedBox(height: 30),
-
+            const SizedBox(height: 30),
+            Row(
+              children: <Widget> [
+                Icon(
+                  Icons.email, 
+                  color: Colors.grey[400],
+                ),
+                const SizedBox(width: 10),
+                const Text(
+                    'john@do.com',
+                    style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                        letterSpacing: 1
+                    ),)
+              ],
+            )
           ],
         ),
       ),
