@@ -20,7 +20,8 @@ class UserCard extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
         child: Column(
-          children: const [
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const <Widget> [
             Text(
               'NAME',
               style: TextStyle(
@@ -28,13 +29,36 @@ class UserCard extends StatelessWidget {
                 letterSpacing: 2
               ),
             ),
+            SizedBox(height: 10),
             Text(
               'Chun-Li',
+              style: TextStyle(
+                color: Colors.amberAccent,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2
+              ),
+            ),
+            SizedBox(height: 30),
+            Text(
+              'Current User Level',
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2
               ),
             ),
+            SizedBox(height: 10),
+            Text(
+              '8',
+              style: TextStyle(
+                color: Colors.amberAccent,
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2
+              ),
+            ),
+            SizedBox(height: 30),
+
           ],
         ),
       ),
