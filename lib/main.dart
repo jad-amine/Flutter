@@ -15,17 +15,12 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.red[600],
       ),
-      body: const Center(
-        child: Text(
-          "hello ninja",
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 2,
-            color: Colors.grey,
-            fontFamily: 'IndieFlower',
-          ),
-        ),
+      body: Center(
+        child: ElevatedButton.icon(
+            onPressed: (){},
+            icon: const Icon(Icons.mail),
+            label: const Text("mail me")
+        )
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
