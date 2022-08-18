@@ -22,6 +22,17 @@ class UserCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget> [
+             const Center(
+               child: CircleAvatar(
+                backgroundImage: AssetImage('assets/profile.jpg'),
+                radius: 80,
+            ),
+             ),
+            Divider(
+              height: 80,
+              thickness: 1,
+              color: Colors.grey[400],
+            ),
             const Text(
               'NAME',
               style: TextStyle(
@@ -31,7 +42,7 @@ class UserCard extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const Text(
-              'John',
+              'Goku',
               style: TextStyle(
                 color: Colors.amberAccent,
                 fontSize: 28,
