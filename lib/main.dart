@@ -4,8 +4,16 @@ void main() => runApp(const MaterialApp(
   home: UserCard(),   // home is a property of MaterialApp (properties can be widgets or styles or ... )
 ));
 
-class UserCard extends StatelessWidget {
+class UserCard extends StatefulWidget {
   const UserCard({Key? key}) : super(key: key);
+
+  @override
+  State<UserCard> createState() => _UserCardState();
+}
+
+class _UserCardState extends State<UserCard> {
+
+  int userLevel = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -59,9 +67,9 @@ class UserCard extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              '8',
-              style: TextStyle(
+             Text(
+              '$userLevel',
+              style: const TextStyle(
                 color: Colors.amberAccent,
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
@@ -72,7 +80,7 @@ class UserCard extends StatelessWidget {
             Row(
               children: <Widget> [
                 Icon(
-                  Icons.email, 
+                  Icons.email,
                   color: Colors.grey[400],
                 ),
                 const SizedBox(width: 10),
