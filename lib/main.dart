@@ -96,6 +96,15 @@ class _UserCardState extends State<UserCard> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          setState(() {
+          userLevel += 1;
+          });
+        },
+        backgroundColor: Colors.grey[600],
+        child: const Icon(Icons.add, color: Colors.white),
+      ),
     );
   }
 }
